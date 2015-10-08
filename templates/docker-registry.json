@@ -1,13 +1,5 @@
 {
-  "namespace": "docker:registry",
-  "image": "eole/envole:latest",
-  "volumes": {
-    "data-dir": "/data"
-  },
-  "ports": {
-    "portal": "/"
-  },
-  "vars": {
-    
-  }
+  "name": "docker:registry",
+  "image": "registry:2",
+  "env": {}
 }
