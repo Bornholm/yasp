@@ -1,7 +1,6 @@
 {
   "namespace": "docker:registry",
   "image": "eole/envole:latest",
-  "dockerfile": "",
   "volumes": {
     "data-dir": "/data"
   },
@@ -9,5 +8,6 @@
     "portal": "/"
   },
   "vars": {
+    
   }
 }

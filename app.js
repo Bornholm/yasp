@@ -1,6 +1,16 @@
-var Aegir = require('./lib/aegir');
-var config = require('./lib/config');
+/* jshint esnext: true, node: true */
 
-var app = new Aegir(config);
+'use strict';
 
-app.listen();
+let Aegir = require('./lib/aegir');
+let config = require('./lib/config');
+
+let app = new Aegir(config);
+
+app.checkTemplates()
+  .then(() => app.listen())
+  .catch(err => {
+    console.error(err);
+    process.exit(1);
+  })
+;

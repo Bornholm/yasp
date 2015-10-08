@@ -19,6 +19,7 @@
     "debug": "^2.2.0",
     "dockerode": "^2.2.3",
     "express": "^4.13.3",
+    "jsonschema": "^1.0.2",
     "morgan": "^1.6.1",
     "rc": "^1.1.2"
   }
