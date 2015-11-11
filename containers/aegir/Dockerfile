@@ -2,8 +2,8 @@ FROM debian:jessie
 
 MAINTAINER William Petit <wpetit@cadoles.com>
 
-ENV http_proxy "http://192.168.10.254:3128"
-ENV https_proxy "http://192.168.10.254:3128"
+#ENV http_proxy "http://192.168.10.254:3128"
+#ENV https_proxy "http://192.168.10.254:3128"
 
 RUN apt-get update &&\
   apt-get install --no-install-recommends --yes ca-certificates curl

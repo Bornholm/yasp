@@ -1,4 +1,7 @@
 {
   "label": "My Docker registry",
-  "template": "docker:registry"
+  "template": "docker:registry",
+  "vars": {
+    
+  }
 }

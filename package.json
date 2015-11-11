@@ -11,8 +11,7 @@
   "license": "MIT",
   "devDependencies": {
     "nodeunit": "^0.9.1",
-    "shelljs": "^0.5.3",
-    "sqlite3": "^3.1.0"
+    "shelljs": "^0.5.3"
   },
   "dependencies": {
     "body-parser": "^1.14.1",
@@ -22,6 +21,7 @@
     "express": "^4.13.3",
     "jsonschema": "^1.0.2",
     "morgan": "^1.6.1",
+    "node-uuid": "^1.4.3",
     "rc": "^1.1.2"
   }
 }
