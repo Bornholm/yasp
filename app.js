@@ -7,8 +7,7 @@ let config = require('./lib/config');
 
 let app = new Aegir(config);
 
-app.checkTemplates()
-  .then(() => app.listen())
+app.listen()
   .catch(err => {
     console.error(err);
     process.exit(1);
