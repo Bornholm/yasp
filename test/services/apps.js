@@ -40,10 +40,12 @@ exports.instanciateAppAndStart = function(test) {
       return apps.instanciate(testApp.imageId);
     })
     .then(instance => {
-      return apps.start(instance.appId);
+      return apps.start(instance.instanceId);
     })
     .then(instance => {
-      return apps.stop(instance.appId);
+      return apps.stop(instance.instanceId);
+    })
+    .then(() => {
       test.done();
     })
     .catch(err => {

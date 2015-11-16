@@ -1,10 +1,14 @@
 FROM debian:jessie
 
-LABEL io.aegir.app="1"
+LABEL io.aegir.app.enabled="1"
 LABEL io.aegir.app.name="Test App"
 LABEL io.aegir.app.description="A simple Aegir app for test purpose"
 
 # App variables
-LABEL io.aegir.app.vars.message="{ \"type\":\"text\", \"default\": \"Hello world !\" }"
+
+# "Message" variable
+LABEL io.aegir.app.vars.message.label="Message"
+LABEL io.aegir.app.vars.message.type="text"
+LABEL io.aegir.app.vars.message.defaultValue="Hello world !"
 
 CMD while true; do echo Ping; sleep 2; done;
