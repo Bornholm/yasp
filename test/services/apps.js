@@ -12,9 +12,9 @@ exports.setUp = function(done) {
   done();
 };
 
-exports.fetchAvailableImages = function(test) {
+exports.listAvailableImages = function(test) {
 
-  this.appsService.fetchAvailableImages()
+  this.appsService.listAvailableImages()
     .then(images => {
       // It should return at least test app
       test.ok(images.length > 0, 'It should return a least one item !');
@@ -30,20 +30,54 @@ exports.fetchAvailableImages = function(test) {
 
 };
 
-exports.instanciateAppAndStart = function(test) {
+exports.instanciateAppThenStartStopAndRemove = function(test) {
 
   let apps = this.appsService;
 
-  apps.fetchAvailableImages()
+  apps.listAvailableImages()
     .then(images => {
       let testApp = images.filter(img => img.appName === 'Test App')[0];
       return apps.instanciate(testApp.imageId);
     })
-    .then(instance => {
-      return apps.start(instance.instanceId);
+    .then(instanceId => {
+      return apps.start(instanceId);
     })
-    .then(instance => {
-      return apps.stop(instance.instanceId);
+    .then(instanceId => {
+      return apps.stop(instanceId);
+    })
+    .then(instanceId => {
+      return apps.remove(instanceId);
+    })
+    .then(() => {
+      test.done();
+    })
+    .catch(err => {
+      test.ifError(err);
+      test.done();
+    })
+  ;
+
+};
+
+exports.instanciateAppThenListInstances = function(test) {
+
+  let apps = this.appsService;
+  let instanceId;
+
+  apps.listAvailableImages()
+    .then(images => {
+      let testApp = images.filter(img => img.appName === 'Test App')[0];
+      return apps.instanciate(testApp.imageId);
+    })
+    .then(_instanceId => {
+      instanceId = _instanceId;
+      return apps.listInstances();
+    })
+    .then(instances => {
+      test.ok(instances && instances.length > 0, 'it sould return at least 1 item !');
+    })
+    .then(() => {
+      return apps.remove(instanceId);
     })
     .then(() => {
       test.done();

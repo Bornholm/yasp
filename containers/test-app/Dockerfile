@@ -11,4 +11,7 @@ LABEL io.aegir.app.vars.message.label="Message"
 LABEL io.aegir.app.vars.message.type="text"
 LABEL io.aegir.app.vars.message.defaultValue="Hello world !"
 
+EXPOSE 80
+VOLUME /test
+
 CMD while true; do echo Ping; sleep 2; done;

@@ -16,8 +16,8 @@ exports.deflaten = function(test) {
 
   let result = ObjectHelpers.deflaten(labels);
 
-  test.equals(result.io.aegir.app.vars.foo.label, 'Foo', 'It should be equal to "Foo" !');
-  test.equals(result.io.aegir.app.vars.bar.defaultValue, '1', 'It should be equal to "1" !');
+  test.equals(result.io.aegir.app.vars.foo.label, 'Foo', "It should be equal to 'Foo' !");
+  test.equals(result.io.aegir.app.vars.bar.defaultValue, '1', "It should be equal to '1' !");
 
   test.done();
 
@@ -26,19 +26,19 @@ exports.deflaten = function(test) {
 exports.pathExists = function(test) {
 
   let obj = {
-    "io": {
-      "aegir": {
-        "app": {
-          "vars": {
-            "foo": {
-              "defaultValue": "Baz",
-              "type": "text",
-              "label": "Foo"
+    io: {
+      aegir: {
+        app: {
+          vars: {
+            foo: {
+              defaultValue: 'Baz',
+              type: 'text',
+              label: 'Foo'
             },
-            "bar": {
-              "defaultValue": "1",
-              "type": "integer",
-              "label": "Bar"
+            bar: {
+              defaultValue: '1',
+              type: 'integer',
+              label: 'Bar'
             }
           }
         }
