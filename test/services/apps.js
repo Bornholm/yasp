@@ -8,7 +8,7 @@ let config = require('../../lib/config');
 exports.setUp = function(done) {
   let dockerClient = new Docker(config.docker);
   let containersService = new services.Containers(dockerClient);
-  this.appsService = new services.Apps(containersService);
+  this.appsService = new services.Apps(containersService, config.volumesDir);
   done();
 };
 
@@ -46,7 +46,7 @@ exports.instanciateAppThenStartStopAndRemove = function(test) {
       return apps.stop(instanceId);
     })
     .then(instanceId => {
-      return apps.remove(instanceId);
+      return apps.remove(instanceId, {dropVolumes: true});
     })
     .then(() => {
       test.done();
@@ -77,7 +77,7 @@ exports.instanciateAppThenListInstances = function(test) {
       test.ok(instances && instances.length > 0, 'it sould return at least 1 item !');
     })
     .then(() => {
-      return apps.remove(instanceId);
+      return apps.remove(instanceId, {dropVolumes: true});
     })
     .then(() => {
       test.done();
