@@ -8,6 +8,7 @@ LABEL io.aegir.app.description="A simple Aegir app for test purpose"
 
 # "Message" variable
 LABEL io.aegir.app.vars.message.label="Message"
+LABEL io.aegir.app.vars.message.description="A basic message to print"
 LABEL io.aegir.app.vars.message.type="text"
 LABEL io.aegir.app.vars.message.defaultValue="Hello world !"
 

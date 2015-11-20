@@ -5,12 +5,14 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
+    "watch": "./node_modules/.bin/supervisor -w './lib' -i './lib/client' app.js",
     "test": "./node_modules/.bin/nodeunit test/**/*.js"
   },
   "author": "William Petit <wpetit@cadoles.com>",
   "license": "MIT",
   "devDependencies": {
-    "nodeunit": "^0.9.1"
+    "nodeunit": "^0.9.1",
+    "supervisor": "^0.9.1"
   },
   "dependencies": {
     "babel-preset-es2015": "^6.1.18",
