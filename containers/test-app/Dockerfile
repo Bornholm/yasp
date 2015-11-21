@@ -11,8 +11,9 @@ LABEL io.aegir.app.vars.message.label="Message"
 LABEL io.aegir.app.vars.message.description="A basic message to print"
 LABEL io.aegir.app.vars.message.type="text"
 LABEL io.aegir.app.vars.message.defaultValue="Hello world !"
+LABEL io.aegir.app.vars.message.env="MY_MESSAGE"
 
 EXPOSE 80
 VOLUME /test
 
-CMD while true; do echo Ping; sleep 2; done;
+CMD while true; do echo $MY_MESSAGE; sleep 2; done;
