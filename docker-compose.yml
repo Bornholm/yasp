@@ -1,9 +1,0 @@
-aegir:
-  build: ./containers/aegir
-  volumes:
-    - ".:/opt/aegir"
-    - "/var/run/docker.sock:/tmp/docker.socket"
-  ports:
-    - "3000:3000"
-  privileged: true
-  container_name: aegir
