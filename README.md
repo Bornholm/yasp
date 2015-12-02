@@ -10,12 +10,11 @@ Yet Another Side Project...
 ## Démarrer avec les sources
 
 ```bash
-git clone --recursive https://github.com/Bornholm/yasp
+git clone -b develop --recursive https://github.com/Bornholm/yasp yasp
 cd yasp
-git checkout develop
-# Installer les dépendances NodeJS
-npm install
-npm start
+npm install # Installer les dépendances NodeJS
+./apps/build-all.sh # "Construire" les images des apps Yasp
+npm run watch
 ```
 
 ## Licence

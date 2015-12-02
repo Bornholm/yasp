@@ -2,10 +2,10 @@
 
 'use strict';
 
-let Aegir = require('./lib/aegir');
+let Yasp = require('./lib/yasp');
 let config = require('./lib/config');
 
-let app = new Aegir(config);
+let app = new Yasp(config);
 
 app.listen()
   .catch(err => {

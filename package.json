@@ -1,5 +1,5 @@
 {
-  "name": "aegir",
+  "name": "yasp",
   "version": "0.0.0",
   "description": "Dockerized applications portal",
   "main": "app.js",
