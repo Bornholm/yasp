@@ -1,2 +1,4 @@
-[submodule "yasp-apps"]
+[submodule "apps"]
+	path = apps
+	url = git@github.com:Bornholm/yasp-apps.git
 	branch = develop

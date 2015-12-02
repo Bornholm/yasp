@@ -1,6 +1,6 @@
-# YASP <small>Yet Another Side Project</small>
+# YASP
 
-
+Yet Another Side Project...
 
 ## Dépendances
 
