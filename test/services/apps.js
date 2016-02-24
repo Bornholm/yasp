@@ -30,7 +30,7 @@ exports.listAvailableImages = function(test) {
 
 };
 
-exports.instanciateAppThenStartStopAndRemove = function(test) {
+exports.instanciateAppThenStartStopAndDelete = function(test) {
 
   let apps = this.appsService;
 
@@ -46,7 +46,7 @@ exports.instanciateAppThenStartStopAndRemove = function(test) {
       return apps.stop(instanceId);
     })
     .then(instanceId => {
-      return apps.remove(instanceId, {dropVolumes: true});
+      return apps.delete(instanceId, {dropVolumes: true});
     })
     .then(() => {
       test.done();
@@ -77,7 +77,7 @@ exports.instanciateAppThenListInstances = function(test) {
       test.ok(instances && instances.length > 0, 'it sould return at least 1 item !');
     })
     .then(() => {
-      return apps.remove(instanceId, {dropVolumes: true});
+      return apps.delete(instanceId, {dropVolumes: true});
     })
     .then(() => {
       test.done();
