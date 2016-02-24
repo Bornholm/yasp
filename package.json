@@ -2,10 +2,10 @@
   "name": "yasp",
   "version": "0.0.0",
   "description": "Dockerized applications portal",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "start": "node app.js",
-    "watch": "./node_modules/.bin/supervisor -w './lib' -i './lib/client' app.js",
+    "watch": "./node_modules/.bin/supervisor -w './lib' -i './lib/client' index.js",
     "test": "./node_modules/.bin/nodeunit test/**/*.js"
   },
   "author": "William Petit <wpetit@cadoles.com>",
