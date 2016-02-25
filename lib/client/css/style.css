@@ -1,3 +1,5 @@
+body { padding-top: 70px; }
+
 .form-condensed, .form-condensed .form-group {
   margin-bottom: 0;
 }
