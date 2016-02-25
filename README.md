@@ -1,6 +1,6 @@
-# YASP
+# YASP <small>*Yet Another Side Project</small>
 
-Yet Another Side Project...
+Système de déploiement/gestion de services/applications basé sur Docker (et quelques conventions).
 
 ## Dépendances
 
@@ -16,6 +16,10 @@ npm install # Installer les dépendances NodeJS
 ./apps/build-all.sh # "Construire" les images des apps Yasp
 npm run watch
 ```
+
+## Documentation
+
+Voir le répertoire [doc](./doc).
 
 ## Licence
 
