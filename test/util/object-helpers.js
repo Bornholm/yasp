@@ -1,7 +1,7 @@
 /* jshint esnext: true, node: true */
 'use strict';
 
-let ObjectHelpers = require('../../lib/util/object-helpers');
+let ObjectHelpers = require('../../lib/server/util/object-helpers');
 
 exports.deflaten = function(test) {
 
