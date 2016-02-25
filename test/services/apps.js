@@ -8,17 +8,17 @@ let config = require('../../lib/server/config');
 exports.setUp = function(done) {
   let dockerClient = new Docker(config.docker);
   let containersService = new services.Containers(dockerClient);
-  this.appsService = new services.Apps(containersService, config.volumesDir);
+  this.appsService = new services.Apps(containersService, config.apps);
   done();
 };
 
 exports.listAvailableTemplates = function(test) {
 
   this.appsService.listAvailableTemplates()
-    .then(images => {
+    .then(templates => {
       // It should return at least test app
-      test.ok(images.length > 0, 'It should return a least one item !');
-      let testApp = images.filter(img => img.appName === 'Test App')[0];
+      test.ok(templates.length > 0, 'It should return a least one item !');
+      let testApp = templates.filter(img => img.appName === 'Test App')[0];
       test.ok(testApp, 'It should return at least the test app !');
       test.done();
     })
@@ -35,9 +35,9 @@ exports.instanciateAppThenStartStopAndDelete = function(test) {
   let apps = this.appsService;
 
   apps.listAvailableTemplates()
-    .then(images => {
-      let testApp = images.filter(img => img.appName === 'Test App')[0];
-      return apps.instanciate(testApp.imageId);
+    .then(templates => {
+      let testApp = templates.filter(tpl => tpl.appName === 'Test App')[0];
+      return apps.instanciate(testApp.id);
     })
     .then(instanceId => {
       return apps.start(instanceId);
@@ -65,9 +65,9 @@ exports.instanciateAppThenListInstances = function(test) {
   let instanceId;
 
   apps.listAvailableTemplates()
-    .then(images => {
-      let testApp = images.filter(img => img.appName === 'Test App')[0];
-      return apps.instanciate(testApp.imageId);
+    .then(templates => {
+      let testApp = templates.filter(tpl => tpl.appName === 'Test App')[0];
+      return apps.instanciate(testApp.id);
     })
     .then(_instanceId => {
       instanceId = _instanceId;
