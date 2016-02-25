@@ -12,5 +12,6 @@
   "maxparams": 4,
   "maxcomplexity": 10,
   "maxerr": 5,
-  "esnext": true
+  "esnext": true,
+  "node": true
 }

@@ -2,8 +2,8 @@
 'use strict';
 
 let Docker = require('dockerode');
-let services = require('../../lib/services');
-let config = require('../../lib/config');
+let services = require('../../lib/server/services');
+let config = require('../../lib/server/config');
 
 exports.setUp = function(done) {
   let dockerClient = new Docker(config.docker);
@@ -12,9 +12,9 @@ exports.setUp = function(done) {
   done();
 };
 
-exports.listAvailableImages = function(test) {
+exports.listAvailableTemplates = function(test) {
 
-  this.appsService.listAvailableImages()
+  this.appsService.listAvailableTemplates()
     .then(images => {
       // It should return at least test app
       test.ok(images.length > 0, 'It should return a least one item !');
@@ -34,7 +34,7 @@ exports.instanciateAppThenStartStopAndDelete = function(test) {
 
   let apps = this.appsService;
 
-  apps.listAvailableImages()
+  apps.listAvailableTemplates()
     .then(images => {
       let testApp = images.filter(img => img.appName === 'Test App')[0];
       return apps.instanciate(testApp.imageId);
@@ -64,7 +64,7 @@ exports.instanciateAppThenListInstances = function(test) {
   let apps = this.appsService;
   let instanceId;
 
-  apps.listAvailableImages()
+  apps.listAvailableTemplates()
     .then(images => {
       let testApp = images.filter(img => img.appName === 'Test App')[0];
       return apps.instanciate(testApp.imageId);
