@@ -1,0 +1,4 @@
+{
+  "host_ports": "Ports de la machine hôte",
+  "app_ports": "Ports de l'application"
+}
