@@ -1,4 +1,6 @@
 {
+  "instance_label": "Nom de l'instance",
+  "instance_label_placeholder": "Mon application #1",
   "instanciate_app": "Instancier le schéma \"{{appName}}\"",
   "instanciate": "Instancier",
   "configuration": "Paramétrage",
