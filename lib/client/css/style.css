@@ -43,3 +43,7 @@ body { padding-top: 55px; }
     transform: rotate(360deg);
   }
 }
+
+.inline-icon {
+  margin-left: 5px;
+}
