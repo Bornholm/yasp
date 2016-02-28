@@ -3,6 +3,7 @@
   "instanciate": "Instancier",
   "configuration": "Paramétrage",
   "network": "Réseau",
+  "no_vars": "Ce schéma d'application ne comporte aucune variable à configurer.",
   "vars_config_explanation": "Voici la liste des variables de configuration disponibles dans votre application. Vous pouvez modifier ici leurs valeurs afin de personnaliser le comportement de votre nouvelle instance.",
   "ports_mapping_explanation": "Vous pouvez configurer ici le plan d'adressage entre les ports de votre application et votre machine hôte."
 }
