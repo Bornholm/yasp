@@ -1,5 +1,7 @@
 {
   "internal_ip_address": "Adresse IP interne",
+  "template_name": "Schéma d'application",
+  "instance_id": "Identifiant de l'instance",
   "creation_date": "Date de création",
   "start": "Démarrer",
   "stop": "Arrêter",
