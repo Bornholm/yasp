@@ -1,6 +1,7 @@
 {
   "app_title": "Yasp",
-  "apps": "Mes applications",
+  "apps": "Applications",
+  "volumes": "Données",
   "templates": "Catalogue",
   "toggle_nav": "Afficher/cacher la navigation",
   "logout": "Se déconnecter"
