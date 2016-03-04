@@ -1,0 +1,4 @@
+{
+  "InstanceAlreadyExistsError": "L'identifiant d'instance {{instanceId}} est déjà utilisé !",
+  "UnknownError": "Erreur inconnue. Veuillez contacter votre administrateur."
+}

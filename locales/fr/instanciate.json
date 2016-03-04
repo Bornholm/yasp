@@ -1,5 +1,8 @@
 {
-  "instance_label": "Nom de l'instance",
+  "instance_base": "Éléments de base",
+  "instance_label": "Label de l'instance",
+  "reuse_instance": "Réutiliser l'identifiant d'une instance précédente ?",
+  "instance_reuse_explanation": "Vous pouvez réutiliser l'identifiant d'une instance précédente afin de récupérer ses données. \nVoir la documentation de Yasp pour plus d'informations.",
   "instance_label_placeholder": "Mon application #1",
   "instanciate_app": "Instancier le schéma \"{{appName}}\"",
   "instanciate": "Instancier",
