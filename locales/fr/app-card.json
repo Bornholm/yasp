@@ -6,6 +6,5 @@
   "start": "Démarrer",
   "stop": "Arrêter",
   "delete": "Supprimer",
-  "administration": "Administration",
-  "open_app_admin": "Ouvrir l'interface d'administration de l'application"
+  "administration": "Administration"
 }
