@@ -6,5 +6,6 @@
   "start": "Démarrer",
   "stop": "Arrêter",
   "delete": "Supprimer",
-  "administration": "Administration"
+  "administration": "Administration",
+  "app_status": "Supervision"
 }
