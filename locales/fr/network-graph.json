@@ -1,3 +1,5 @@
 {
-  "network_use": "Utilisation réseau"
+  "network_use": "Utilisation réseau",
+  "input_rate": "Entrée",
+  "output_rate": "Sortie"
 }
